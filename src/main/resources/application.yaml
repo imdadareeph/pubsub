@@ -1,0 +1,35 @@
+spring:
+  cloud:
+    function:
+      definition: uppercase
+    stream:
+      binders:
+      #This section of the configuration tells the solace binder how to connect to the solace event broker/mesh
+        solace-broker:
+          type: solace
+          environment:
+            solace:
+              java:
+                host:
+                msgVpn:
+                clientUsername:
+                clientPassword:
+                connectRetries: 3
+                connectRetriesPerHost: 0
+                reconnectRetries: 3
+      bindings:
+      #The bindings section is used to define your input and output channels.
+        uppercase-in-0:
+          destination: uppercaseProcessorQ
+          #The presence of "group" tells the binder to follow the "consumer group" pattern; if not present the "publish-subscribe" pattern will be used.
+          #group: GROUP
+        uppercase-out-0:
+          destination: devSessionProcessor
+          #destination: send/to/topic
+      solace:
+      #The solace bindings section allows for solace specific configurations to be applied to a channel. A common example is adding topic subscriptions to a queue as shown below.
+        bindings:
+          uppercase-in-0:
+            consumer:
+              queueAdditionalSubscriptions: solace/devsess/apac/>,solace/devsess/*/officehours/202101*
+              #queueAdditionalSubscriptions: topic/subscriptions,wildcards/*/accepted/>
