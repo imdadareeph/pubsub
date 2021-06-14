@@ -17,7 +17,7 @@ mvn clean install -Dmaven.test.skip=true
 
 
 ## Open APIs / Swagger
-http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/Trade-controller
+http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/trade-controller/tradeDetailListRest
 
 http://localhost:8080/h2-console/
 
@@ -25,4 +25,5 @@ http://localhost:8080/h2-console/
 
 ![alt text](https://raw.githubusercontent.com/imdadareeph/pubsub/main/screenshot/screenshot1.png "preview1")
 ![alt text](https://raw.githubusercontent.com/imdadareeph/pubsub/main/screenshot/screenshot2.png "preview2")
+![alt text](https://raw.githubusercontent.com/imdadareeph/pubsub/main/screenshot/screenshot3.png "preview3")
 

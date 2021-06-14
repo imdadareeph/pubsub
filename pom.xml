@@ -55,11 +55,11 @@
 			<artifactId>commons-collections4</artifactId>
 			<version>4.4</version>
 		</dependency>
-		<!--<dependency>
+		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>1.5.9</version>
-		</dependency>-->
+		</dependency>
 
 		<dependency>
 			<groupId>org.mockito</groupId>

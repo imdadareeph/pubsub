@@ -1,0 +1,12 @@
+Topic : tradedetails/1
+
+Message :
+{
+  "id": 1,
+  "name": "imdad",
+  "description": "imdaddesc",
+  "thresholdMax": "110",
+  "soldoutMin": "98",
+  "price": 100,
+  "amount": 99.5
+}
